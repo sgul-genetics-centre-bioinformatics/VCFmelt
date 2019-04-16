@@ -2,12 +2,13 @@
 """
 Genetics Centre Bioinformatics - St George's University of London - 2019
 Dionysios Grigoriadis & Alan Pittman
-
 #################################################################
-Melt a VCF file into a tab delimited set of calls, one per line.
+Melt a VCF file into a tab delimited set of calls, one per sample per line.
 
-
-This script reads vcf on stdin and conerts it to TSV file. One call per line.
+VCF files have all the calls from different samples on one line.  This
+script reads vcf on stdin and writes all calls to stdout in tab delimited
+format with one call in one sample per line.  This makes it easy to find
+a given sample's genotype with, say, grep.
 """
 
 import sys
